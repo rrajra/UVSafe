@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css"> 
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    -->
+    <title>UV Safe</title>
+  </head>
+  <body>
+
+    <div class="mainScreen">
+
+      <div class="locationInput" id="locationID">
+        <h1>Where are you located?</h1>
+        <img src="mapPin.svg" id="mapPin"><input type="text" id="locationInput">
+        <button id="cont1">Continue</button>
+      </div>
+
+      <div class="latInput" id="latID">
+        <h1>Enter your latitude to continue.</h1>
+        <input type="text" id="latInput">
+        <button id="cont2">Continue</button>
+      </div>
+
+      <div class="longInput" id="longID">
+        <h1>Now enter your longitude to continue. latitute is: <p id="latInfo"></p></h1>
+        <input type="text" id="longInput">
+        <button id="cont3">Continue</button>
+      </div>
+
+      <div class="getUV" id="getUVButton">
+        <button id="getUVButton">Get UV</button>
+      </div>
+
+      <div class="postLaunch" id="postLaunch">
+        <h1 id="locationName"></h1>
+        <p id="UVText">The UV is currently:<p id="UVNum"></p></p> <img src="sun.svg">
+        <div class="newBtn">
+          <button id="newLocation">New Location</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="./UVInfo.js"></script>
+  </body>
+</html>

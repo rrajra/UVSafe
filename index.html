@@ -20,6 +20,10 @@
         <button id="cont1">Continue</button>
       </div>
 
+      <div class="warning" id="warningText">
+        <h1>Location not found, please re-enter.</h1>        
+      </div>
+
       <div class="latInput" id="latID">
         <h1>Enter your latitude to continue.</h1>
         <input type="text" id="latInput">
@@ -38,10 +42,34 @@
 
       <div class="postLaunch" id="postLaunch">
         <h1 id="locationName"></h1>
-        <p id="UVText">The UV is currently:<p id="UVNum"></p></p> <img src="sun.svg">
+
+        <div class="information">
+          <div class="UVInfo">
+            <div class="currentUV">
+              <img src="sunOff.svg"><p id="UVText">The UV is currently:</p><p id="UVNum"></p>
+            </div>
+            <div class="maxUV">
+                <img src="sun.svg">
+                <div class="tooltip">
+                  <p id="UVMax">The max UV today is:</p>
+                  <span class="tooltiptext" id="toolText"></span>
+                </div>
+                <p id="UVMaxNum"></p>
+              </div>
+            </div>
+          </div>
+
         <div class="newBtn">
           <button id="newLocation">New Location</button>
         </div>
+
+        <div class="infoBarContainer" id="infoContainer">
+          <div class="infoBar" id="info">
+            <p id="infoBarText"></p>
+            <img src="x.svg" id="closeOut">
+          </div>
+        </div>
+
       </div>
     </div>
 
